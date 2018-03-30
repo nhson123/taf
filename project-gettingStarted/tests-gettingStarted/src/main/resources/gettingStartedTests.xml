@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Testsuite for Getting Started" verbose="1" parallel="false" thread-count="1" configfailurepolicy="continue">
+    <test name="Regression Test" parallel="false">
+        <classes>
+            <class name="com.anecon.taf.gettingStarted.test.LoginTestCase"/>
+            <class name="com.anecon.taf.gettingStarted.test.RestAccountsTestCase"/>
+            <class name="com.anecon.taf.gettingStarted.test.UiAccountsTestCase"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.anecon.taf</groupId>
+        <artifactId>client-parent</artifactId>
+        <version>1.4.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>client-meux</artifactId>
+
+    <packaging>jar</packaging>
+    <name>A2A - clients - M-eux</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.anecon.taf</groupId>
+            <artifactId>client-ui-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.anecon.taf</groupId>
+            <artifactId>client-ranorex</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.anecon.taf</groupId>
+            <artifactId>MeuxSystem</artifactId>
+            <version>1.0.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.anecon.taf</groupId>
+            <artifactId>framework-core</artifactId>
+        </dependency>
+    </dependencies>
+
+    <!--
+    created with: mvn deploy:deploy-file -DgroupId=com.anecon.taf -DartifactId=MeuxSystem -Dversion=1.0.0 \
+    -Durl=file:./lib/repo/ -DrepositoryId=local-meux-repo -DupdateReleaseInfo=true -Dfile=MeuxSystem.jar
+    -->
+    <repositories>
+        <repository>
+            <id>local-meux-repo</id>
+            <url>file:///${project.basedir}/lib/repo</url>
+        </repository>
+    </repositories>
+</project>

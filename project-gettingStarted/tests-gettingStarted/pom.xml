@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.anecon.taf</groupId>
+        <artifactId>project-gettingStarted</artifactId>
+        <version>1.4.0-SNAPSHOT</version>
+    </parent>
+
+    <!-- groupId can't be ommited because of maven version plugin - see: http://stackoverflow.com/a/29995282/1436981 -->
+    <groupId>com.anecon.taf</groupId>
+    <artifactId>tests-gettingStarted</artifactId>
+    <packaging>jar</packaging>
+    <name>A2A - Project - Getting Started - Tests</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.anecon.taf</groupId>
+            <artifactId>keywords-gettingStarted</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.anecon.taf</groupId>
+            <artifactId>data-gettingStarted</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.anecon.taf</groupId>
+            <artifactId>client-data</artifactId>
+        </dependency>
+    </dependencies>
+</project>

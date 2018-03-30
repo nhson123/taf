@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.anecon.taf</groupId>
+        <artifactId>root</artifactId>
+        <version>1.4.0-SNAPSHOT</version>
+    </parent>
+
+    <!-- groupId can't be ommited because of maven version plugin - see: http://stackoverflow.com/a/29995282/1436981 -->
+    <groupId>com.anecon.taf</groupId>
+    <artifactId>project-gettingStarted</artifactId>
+    <packaging>pom</packaging>
+    <name>A2A - Project - Getting Started</name>
+
+    <modules>
+        <module>keywords-gettingStarted</module>
+        <module>data-gettingStarted</module>
+        <module>tests-gettingStarted</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>aspectj-maven-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <complianceLevel>1.8</complianceLevel>
+                    <encoding>UTF-8</encoding>
+                    <aspectLibraries>
+                        <aspectLibrary>
+                            <groupId>com.anecon.taf</groupId>
+                            <artifactId>framework-core</artifactId>
+                        </aspectLibrary>
+                    </aspectLibraries>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>test-compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
